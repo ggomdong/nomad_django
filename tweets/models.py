@@ -12,6 +12,10 @@ class Tweet(CommonModel):
 
     def __str__(self):
         return self.payload
+    
+    def total_likes(self):
+        return self.likes.count()
+
 
 class Like(CommonModel):
     user = models.ForeignKey(
