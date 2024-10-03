@@ -3,5 +3,5 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.tweets)
+    path("<int:pk>/tweets/", views.tweets),
 ]
